@@ -11,8 +11,10 @@ app.get("/", (req, res) => {
 });
 
 app.get ("/drinks", (req, res) => {
-    res.send (drinks);
-})
+    res.render ("drinks_index.ejs");
+});
+
+
 app.listen(port, ()=> {
     console.log("Listening from port ", port);
 }); 
