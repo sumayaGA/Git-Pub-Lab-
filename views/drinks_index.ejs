@@ -19,7 +19,10 @@
     <% for (let i=0; i < allDrinks.length; i++) { %>
         <ul>
          <!-- To capitilize the first leter I googled and found online that I could use ".replace(/\w/, c=> c.toUpperCase())" but I had to play around with the code a bit since some of the drinks were in all CAPS. -->
-            <%=allDrinks[i].name.toLowerCase().replace(/\w/, c => c.toUpperCase())%>
+           
+            <!-- <a href="/drinks/id">Back to Drinks Index Page</a> -->
+            <a href="/drinks/<%=i%>"><%=allDrinks[i].name.toLowerCase().replace(/\w/, c => c.toUpperCase())%></a>
+            
 
         </ul>
         <%}%>
