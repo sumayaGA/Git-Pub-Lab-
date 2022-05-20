@@ -25,8 +25,9 @@ app.get("/drinks", (req,res) => {
 
 //Show
 app.get("/drinks/:id",(req,res)=>{
-    res.send(req.params.id);
+    res.render("drinks_show.ejs", {allDrinks:drinks});
 });
+
 
 app.listen(port, ()=> {
     console.log("Listening from port ", port);
